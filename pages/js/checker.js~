@@ -1,0 +1,186 @@
+// JavaScript Document
+
+
+
+$('#vqp_code').ready(function()
+
+{
+
+	var vqp_code = $('#vqp_code').val();
+
+	$('#status').html('<img src="../img/loading.gif">');
+
+	
+
+	if(vqp_code!='')
+
+	{
+
+		$.post('../checker.php',{vqp_code:vqp_code},
+
+		function(data)
+
+		{
+
+			$('#status').html(data);
+
+		});
+
+	}
+
+	else
+
+	{
+
+		$('#status').html('');
+
+	}
+
+});
+
+$('#user_name').keyup(function()
+
+{
+
+	
+
+    var edit_account = document.getElementById('edit_account');
+
+	var user_name = $('#user_name').val();
+
+	$('#status').html('<img src="../img/loading.gif">');
+
+	
+
+	if(user_name!='')
+
+	{
+
+		$.post('../checker.php',{user_name:user_name},
+
+		function(data)
+
+		{
+
+			$('#status').html(data);
+
+		});
+
+		edit_account.disabled = false;
+
+	}
+
+	else
+
+	{
+
+		$('#status').html('');
+
+		edit_account.disabled = true;
+
+	}
+
+});
+
+
+$(function() {
+
+
+
+		$( "#vqp_date" ).datepicker({beforeShowDay: $.datepicker.noWeekends});
+
+
+
+		});
+
+		
+
+$('#vqp_password').keyup(function()
+
+{
+
+	
+
+    var vqpregister = document.getElementById('vqpregister');
+
+	var vqp_password = $('#vqp_password').val();
+
+	$('#status').html('<img src="../img/loading.gif">');
+
+	
+
+	if(vqp_password!='')
+
+	{
+
+		$.post('../vqpchecker.php',{vqp_password:vqp_password},
+
+		function(data)
+
+		{
+
+			$('#status').html(data);
+
+		});
+
+		vqpregister.disabled = false;
+
+	}
+
+	else
+
+	{
+
+		$('#status').html('');
+
+		vqpregister.disabled = true;
+
+	}
+
+});
+
+
+
+$('#vqp_name').focusout(function()
+
+{
+
+	
+
+    var vqpregister = document.getElementById('vqpregister');
+
+	var vqp_name = $('#vqp_name').val();
+
+	$('#status').html('<img src="../img/loading.gif">');
+
+	
+
+	if(vqp_name!='')
+
+	{
+
+		$.post('../vqpchecker.php',{vqp_name:vqp_name},
+
+		function(data)
+
+		{
+
+			$('#status').html(data);
+
+		});
+
+		vqpregister.disabled = false;
+
+	}
+
+	else
+
+	{
+
+		$('#status').html('');
+
+		vqpregister.disabled = true;
+
+	}
+
+});

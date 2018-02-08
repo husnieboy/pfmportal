@@ -1,0 +1,30 @@
+body{
+	font-family: Tahoma;
+	color:#373a37;
+	filter:alpha(opacity=90);    /* ie  */
+	-moz-opacity:0.9;    /* old mozilla browser like netscape  */
+	-khtml-opacity: 0.9;    /* for really really old safari */  
+	opacity: 0.9;    /* css standard, currently it works in most modern browsers like firefox,  */
+}
+input{
+	font-size: 20px;
+}
+
+table {border-collapse: collapse;
+	margin: auto;
+	padding: auto;}
+
+#inputcell{
+	width: 250px;
+}
+
+.heading {font-size: 22px;
+		text-align: center;}
+
+.format{vertical-align: top;}
+
+.files {background-color: #b2b5b1;}
+
+.istug{padding-left:30%;}
+
+.list{padding-left: 20px;}

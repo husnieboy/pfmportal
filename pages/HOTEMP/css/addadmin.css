@@ -1,0 +1,15 @@
+body{
+	font-family: Tahoma;
+	color:#373a37;
+	filter:alpha(opacity=90);    /* ie  */
+	-moz-opacity:0.9;    /* old mozilla browser like netscape  */
+	-khtml-opacity: 0.9;    /* for really really old safari */  
+	opacity: 0.9;    /* css standard, currently it works in most modern browsers like firefox,  */
+}
+
+input{
+	font-size: 20px;
+	color: #000;
+}
+
+.bg{background: url(../icons/tick.png) repeat;}
